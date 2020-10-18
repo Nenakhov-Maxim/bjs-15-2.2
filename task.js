@@ -9,12 +9,17 @@ String.prototype.isPalindrome = function () {
     }
 }
 
-function getAverageMark(marks) {       
+function getAverageMark(marks) {  
+    let roundedAverage;
+    if (marks.length == 0) {
+        roundedAverage = 0;
+        return roundedAverage;
+    }    
     let mark = 0;    
     for (let i = 0, len = marks.length; i < len; i++) {
         mark = mark + marks[i];        
     }
-    let roundedAverage = Math.round(mark / marks.length);    
+    roundedAverage = Math.round(mark / marks.length);    
     return roundedAverage;
 }
 
