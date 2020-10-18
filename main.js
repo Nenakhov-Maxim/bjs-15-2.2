@@ -1,5 +1,4 @@
-function polindromChecker() {
-    debugger;
+function polindromChecker() {    
     const result = palindromeInput.value.isPalindrome();
     checkedValue.innerText = `Строка ${!result && "не " || ""}является полиндромом`;
 }
