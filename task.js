@@ -18,7 +18,20 @@ function getAverageMark(marks) {
     return roundedAverage;
 }
 
-function checkBirthday(birthday) {
-    // код для задачи №3 писать здесь
-    // return verdict
+function checkBirthday(birthday) {    
+    let now = new Date()
+    birthday = new Date(birthday)    
+    let birthdayYear = birthday.getFullYear();
+    let leapYear = 2020;
+    let summLeapYear = 0;
+    let msInDay = 24 * 60 * 60 * 1000;
+    let msInYears = msInDay * 365;
+    while (leapYear >= birthdayYear) {
+        leapYear = leapYear - 4;
+        summLeapYear +=1;
+    }        
+    let diff = now - birthday;
+    let age = (diff + (summLeapYear * msInDay)) / msInYears;
+    let verdict = (age >= 18) ? true : false;    
+    return verdict;
 }
