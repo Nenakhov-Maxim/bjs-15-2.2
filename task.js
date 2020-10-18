@@ -9,8 +9,8 @@ String.prototype.isPalindrome = function () {
     }
 }
 
-function getAverageMark(marks) {    
-    let mark = 0;
+function getAverageMark(marks) {       
+    let mark = 0;    
     for (let i = 0, len = marks.length; i < len; i++) {
         mark = mark + marks[i];        
     }
